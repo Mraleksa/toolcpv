@@ -4,6 +4,7 @@
   "dependencies": {
     "d3": "latest",
     "monk": "latest",
+    "sqlite3": "latest",
     "lodash": "latest",
     "axios": "latest"
   },
