@@ -5,3 +5,4 @@ const users = db.get('database')
 
 users.insert({ name: 'hi',quote: ' mongo!'})
 
+db.close()
