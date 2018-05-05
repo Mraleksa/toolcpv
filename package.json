@@ -2,9 +2,10 @@
   "version": "0.0.1",
   "main": "scraper.js",
   "dependencies": {
-    "cheerio": "latest",
-    "request": "latest",
-    "sqlite3": "latest"
+    "d3": "latest",
+    "monk": "latest",
+    "lodash": "latest",
+    "axios": "latest"
   },
   "keywords": [
     "scraper",
