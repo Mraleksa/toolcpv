@@ -4,5 +4,3 @@ const db = require('monk')("mongodb://Mr_cep:Mr_cep258258@ds111078.mlab.com:1107
 const users = db.get('database')
 
 users.insert({ name: 'hi',quote: ' mongo!'})
-
-db.close()
