@@ -5,7 +5,6 @@ const fs = require('fs');
 var lodash = require('lodash');
 //var d3 = require('d3');
 
-//const my_secret_value = 'mongodb://Mr_cep:Mr_cep258258@ds111078.mlab.com:11078/cep';
 
 const db = require('monk')(my_secret_value)
 const collection = db.get('database')
