@@ -226,7 +226,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 				})
 				.then(function (contract) {	
 					//console.log(contract)
-					//collection.insert(contract)
+					collection.insert(contract)
 					
 				})
 				
