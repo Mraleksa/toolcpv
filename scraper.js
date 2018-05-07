@@ -235,7 +235,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 		
 	})
 	.then(function () {	
-		if (next<1){setTimeout(function() {piv ();},5000);}		
+		if (next<100){setTimeout(function() {piv ();},5000);}		
 		else {console.log("stop");}
 	});
 	
