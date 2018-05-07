@@ -12,10 +12,11 @@ const collection = db.get('database')
 
 
 
+
 var start =  "2017-09-01T00:00:00.414188+03:00" 
 var array = [];
 var next = 0;
-console.log(start)
+//console.log(start)
 function piv(){  
 next++;
 
@@ -24,7 +25,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 	.then(function (data) {	
 		var dataset = data.data.data;
 		start = data.data.next_page.offset;
-		console.log(start)
+		//console.log(start)
 		return dataset;
 	})
 	.then(function (dataset) {	
@@ -190,7 +191,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 					for (var i = 0; i < get.awards.length; i++) {
 						if(get.awards[i].lotID==relatedLot){
 							lowerPrice.push(get.awards[i].value.amount);
-							if(Math.max(...lowerPrice)==lowerPrice[lowerPrice.length-1];)disq='y'
+							if(Math.max(...lowerPrice)==lowerPrice[lowerPrice.length-1])disq='y';
 						}		
 					}
 					
