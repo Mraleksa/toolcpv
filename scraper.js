@@ -1,3 +1,5 @@
+my_secret_value = process.env.MORPH_MONGO;
+
 const axios = require('axios')
 const fs = require('fs');
 var lodash = require('lodash');
