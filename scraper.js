@@ -15,7 +15,7 @@ const collection = db.get('database')
 var start =  "2017-09-01T00:00:00.414188+03:00" 
 var array = [];
 var next = 0;
-//console.log(start)
+console.log(start)
 function piv(){  
 next++;
 
@@ -24,7 +24,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 	.then(function (data) {	
 		var dataset = data.data.data;
 		start = data.data.next_page.offset;
-		//console.log(start)
+		console.log(start)
 		return dataset;
 	})
 	.then(function (dataset) {	
