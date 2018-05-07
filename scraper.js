@@ -184,7 +184,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 						for (var i = 0; i < get.awards.length; i++) {
 							if(get.awards[i].lotID==relatedLot){
 								lowerPrice.push(get.awards[i].value.amount);
-								if(Math.max(...lowerPrice)==lowerPrice[lowerPrice.length-1])disq='y';
+								if(lowerPrice.length>1&&Math.max(...lowerPrice)==lowerPrice[lowerPrice.length-1])disq='y';
 							}		
 						}
 					
@@ -203,7 +203,8 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 					
 					
 		
-					contract.save=Math.round((startAmount-contract.amount)/startAmount*100);
+					contract.save_=Math.round((startAmount-contract.amount)/startAmount*100);
+					contract.save=Math.round((amountFromTender-contract.amount)/amountFromTender*100);
 					contract.numberOfBids=get.numberOfBids;
 					contract.bids_uniq=bids_uniq;
 					contract.complaints=complaints;
@@ -221,7 +222,6 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 					contract.lowerPrice=lowerPrice;
 					contract.disq=disq;
 					
-				//if (get.contracts.length<get.awards.length)console.log(contract.tender_id +" : "+lowerPrice+" : "+disq)
 					return contract;
 				})
 				.then(function (contract) {	
@@ -235,7 +235,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 		
 	})
 	.then(function () {	
-		if (next<10){setTimeout(function() {piv ();},5000);}		
+		if (next<1){setTimeout(function() {piv ();},5000);}		
 		else {console.log("stop");}
 	});
 	
