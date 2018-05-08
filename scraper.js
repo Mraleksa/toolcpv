@@ -12,7 +12,7 @@ const collection = db.get('database')
 
 
 
-var start =  "2017-11-14T17:14:29.906025+02:00" 
+var start =  "2017-11-17T10:30:35.397607+02:00" 
 var array = [];
 var next = 0;
 console.log(start)
@@ -235,7 +235,7 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 		
 	})
 	.then(function () {	
-		if (next<500){setTimeout(function() {piv ();},5000);}		
+		if (next<100){setTimeout(function() {piv ();},5000);}		
 		else {setTimeout(function() {console.log("stop");db.close();},500000); }
 	});
 	
