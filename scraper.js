@@ -12,7 +12,7 @@ const collection = db.get('database')
 
 
 
-var start =  "2017-11-17T10:30:35.397607+02:00" 
+var start =  "2017-11-17T11:04:58.854230+02:00" 
 var array = [];
 var next = 0;
 console.log(start)
