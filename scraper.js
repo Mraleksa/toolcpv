@@ -7,7 +7,7 @@ var lodash = require('lodash');
 
 
 const db = require('monk')(my_secret_value)
-const collection = db.get('database')
+const collection = db.get('cpv-tool')
 
 
 
