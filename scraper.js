@@ -48,7 +48,6 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 					var edrSuppliers = get.suppliers[0].identifier.id;	
 					var suppliers =  get.suppliers[0].name;	
 					var regionSuppliers =  get.suppliers[0].address.region;	
-					var contactPointSuppliers =  get.suppliers[0].contactPoint.email;
 					var cpv = get.items[0].classification.id;
 					var cpvDescription = get.items[0].classification.description;
 					var price='';var units='';
@@ -107,7 +106,6 @@ axios.get('https://public.api.openprocurement.org/api/2.3/contracts?offset='+sta
 					edrBuyer:edrBuyer,
 					regionSuppliers:regionSuppliers,
 					edrSuppliers:edrSuppliers,
-					contactPointSuppliers:contactPointSuppliers,
 					items:items,
 					unit:unit,
 					quantity:quantity,
