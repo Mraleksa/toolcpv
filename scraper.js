@@ -12,7 +12,7 @@ const collection = db.get('cpv-tool')
 
 
 
-var start =  "2018-01-01T11:00:00.054230+02:00" 
+var start =  "2018-01-01T16:19:46.426435+02:00" 
 var array = [];
 var next = 0;
 console.log(start)
